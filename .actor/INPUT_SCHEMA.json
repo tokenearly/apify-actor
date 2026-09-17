@@ -15,7 +15,7 @@
     "exchanges": {
       "title": "Exchanges",
       "type": "array",
-      "description": "Only return listings from these exchanges. Leave empty for all 10. Note: HTX uses the id `huobi`.",
+      "description": "Only return listings from these exchanges. Leave empty for all supported exchanges. Note: HTX uses the id `huobi`.",
       "editor": "select",
       "items": {
         "type": "string",
