@@ -1,0 +1,23 @@
+{
+  "actorSpecification": 1,
+  "fields": {},
+  "views": {
+    "overview": {
+      "title": "Listings",
+      "transformation": {
+        "fields": ["published_at", "exchange_name", "type", "symbols", "title_en", "permalink"]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "published_at": { "label": "Published (UTC)", "format": "date" },
+          "exchange_name": { "label": "Exchange", "format": "text" },
+          "type": { "label": "Type", "format": "text" },
+          "symbols": { "label": "Symbols", "format": "array" },
+          "title_en": { "label": "Title (EN)", "format": "text" },
+          "permalink": { "label": "Permalink", "format": "link" }
+        }
+      }
+    }
+  }
+}

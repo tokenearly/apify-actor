@@ -1,0 +1,22 @@
+{
+  "name": "tokenearly-exchange-listings",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "New crypto token listings from 10 exchanges (Binance, OKX, Bybit, Bitget, MEXC, Gate.io, HTX, KuCoin, Upbit, Bithumb) as a clean dataset. No API key needed.",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "apify": "^3.2.6"
+  },
+  "scripts": {
+    "start": "node src/main.js"
+  },
+  "author": "Tokenearly",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tokenearly/apify-actor"
+  },
+  "homepage": "https://tokenearly.com"
+}

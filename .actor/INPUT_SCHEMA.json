@@ -1,0 +1,47 @@
+{
+  "title": "Tokenearly Exchange Listings input",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "days": {
+      "title": "Look-back window (days)",
+      "type": "integer",
+      "description": "How many past days of listing announcements to return. Between 1 and 30.",
+      "default": 7,
+      "minimum": 1,
+      "maximum": 30,
+      "unit": "days"
+    },
+    "exchanges": {
+      "title": "Exchanges",
+      "type": "array",
+      "description": "Only return listings from these exchanges. Leave empty for all 10. Note: HTX uses the id `huobi`.",
+      "editor": "select",
+      "items": {
+        "type": "string",
+        "enum": ["binance", "okx", "bybit", "bitget", "mexc", "gate", "huobi", "kucoin", "upbit", "bithumb"],
+        "enumTitles": ["Binance", "OKX", "Bybit", "Bitget", "MEXC", "Gate.io", "HTX (huobi)", "KuCoin", "Upbit", "Bithumb"]
+      },
+      "default": [],
+      "prefill": []
+    },
+    "type": {
+      "title": "Listing type",
+      "type": "string",
+      "description": "Filter by market type: spot listings, futures (perpetual) listings, or both.",
+      "editor": "select",
+      "enum": ["all", "spot", "futures"],
+      "enumTitles": ["All", "Spot", "Futures"],
+      "default": "all"
+    },
+    "limit": {
+      "title": "Maximum items",
+      "type": "integer",
+      "description": "Maximum number of listings to return (newest first). Between 1 and 500.",
+      "default": 200,
+      "minimum": 1,
+      "maximum": 500
+    }
+  },
+  "required": []
+}
