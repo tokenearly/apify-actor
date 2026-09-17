@@ -64,7 +64,7 @@ The run also stores two records in the default key-value store:
 | Field | Type | Default | Description |
 | --- | --- | --- | --- |
 | `days` | integer, 1 to 30 | `7` | Look-back window in days |
-| `exchanges` | string[] | all 10 | Restrict to specific exchange ids: `binance`, `okx`, `bybit`, `bitget`, `mexc`, `gate`, `huobi` (HTX), `kucoin`, `upbit`, `bithumb` |
+| `exchanges` | string[] | all supported exchanges | Restrict to specific exchange ids: `binance`, `okx`, `bybit`, `bitget`, `mexc`, `gate`, `huobi` (HTX), `kucoin`, `upbit`, `bithumb` |
 | `type` | `all`, `spot` or `futures` | `all` | Market type filter |
 | `limit` | integer, 1 to 500 | `200` | Maximum number of listings, newest first |
 
