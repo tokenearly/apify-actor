@@ -1,6 +1,6 @@
 # Tokenearly Exchange Listings
 
-Get the newest crypto token listings from 10 exchanges as a clean, structured dataset. No API key, no login, no scraping setup: run the Actor and every new spot or futures listing announced by **Binance, OKX, Bybit, Bitget, MEXC, Gate.io, HTX, KuCoin, Upbit and Bithumb** in your chosen time window lands in the default dataset, ready to export as JSON, CSV, Excel or XML, or to feed into a Zapier, Make, n8n or Google Sheets integration.
+Get the newest crypto token listings from 10+ exchanges as a clean, structured dataset. No API key, no login, no scraping setup: run the Actor and every new spot or futures listing announced by **Binance, OKX, Bybit, Bitget, MEXC, Gate.io, HTX, KuCoin, Upbit and Bithumb** in your chosen time window lands in the default dataset, ready to export as JSON, CSV, Excel or XML, or to feed into a Zapier, Make, n8n or Google Sheets integration.
 
 The data comes from [Tokenearly](https://tokenearly.com), a real-time crypto alert platform that monitors exchange listing announcements, exchange news and X (Twitter) activity. The public listing feed is available under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); please keep the attribution "Data by Tokenearly (https://tokenearly.com)" when you republish the data.
 
@@ -88,7 +88,7 @@ Example input that returns only spot listings on Binance and Upbit from the last
 
 ## How the data is collected
 
-Tokenearly watches the official announcement channels of all 10 exchanges. Binance and Gate.io arrive over the exchanges' own WebSocket streams, with no polling interval to wait out; the other exchanges are polled at high frequency. Every announcement is classified as a spot or futures listing, the token symbols are extracted from the title, and the title is translated into English, Chinese and Korean. This Actor reads Tokenearly's public listing feed and maps it into the flat dataset format above.
+Tokenearly watches the official announcement channels of 10+ exchanges. Binance and Gate.io arrive over the exchanges' own WebSocket streams, with no polling interval to wait out; the other exchanges are polled at high frequency. Every announcement is classified as a spot or futures listing, the token symbols are extracted from the title, and the title is translated into English, Chinese and Korean. This Actor reads Tokenearly's public listing feed and maps it into the flat dataset format above.
 
 If you need push notifications instead of a dataset, the same feed powers the Tokenearly Telegram channel and the alerting product, which can also filter announcements by keyword and deliver them to Telegram, Bark, PushDeer, WeCom, DingTalk, Feishu and generic webhooks.
 

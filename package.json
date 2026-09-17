@@ -2,7 +2,7 @@
   "name": "tokenearly-exchange-listings",
   "version": "0.1.0",
   "type": "module",
-  "description": "New crypto token listings from 10 exchanges (Binance, OKX, Bybit, Bitget, MEXC, Gate.io, HTX, KuCoin, Upbit, Bithumb) as a clean dataset. No API key needed.",
+  "description": "New crypto token listings from 10+ exchanges (Binance, OKX, Bybit, Bitget, MEXC, Gate.io, HTX, KuCoin, Upbit, Bithumb) as a clean dataset. No API key needed.",
   "engines": {
     "node": ">=20.0.0"
   },

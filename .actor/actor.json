@@ -2,7 +2,7 @@
   "actorSpecification": 1,
   "name": "tokenearly-exchange-listings",
   "title": "Tokenearly Exchange Listings",
-  "description": "New crypto token listings from 10 exchanges (Binance, OKX, Bybit, Bitget, MEXC, Gate.io, HTX, KuCoin, Upbit, Bithumb) as a clean dataset. No API key needed.",
+  "description": "New crypto token listings from 10+ exchanges (Binance, OKX, Bybit, Bitget, MEXC, Gate.io, HTX, KuCoin, Upbit, Bithumb) as a clean dataset. No API key needed.",
   "version": "0.1",
   "buildTag": "latest",
   "input": "./INPUT_SCHEMA.json",
