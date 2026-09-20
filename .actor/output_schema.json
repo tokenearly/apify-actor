@@ -1,0 +1,31 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "Tokenearly exchange listings output",
+    "description": "New crypto token listings collected from 10+ exchanges, plus a per-exchange coverage summary.",
+    "properties": {
+        "listings": {
+            "type": "string",
+            "title": "Listings",
+            "description": "One record per new token listing: exchange, type (spot or futures), symbols, publication time in UTC, the announcement title in English, Chinese and Korean, the exchange's own announcement URL and a permalink.",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?clean=true&format=json"
+        },
+        "listingsCsv": {
+            "type": "string",
+            "title": "Listings (CSV)",
+            "description": "The same listings as a CSV file, for spreadsheets.",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?clean=true&format=csv"
+        },
+        "exchanges": {
+            "type": "string",
+            "title": "Exchange coverage summary",
+            "description": "Per-exchange summary: how announcements are collected (WebSocket stream or high-frequency polling) and how many listings each exchange published in the last 30 days.",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/EXCHANGES"
+        },
+        "runSummary": {
+            "type": "string",
+            "title": "Run summary",
+            "description": "What this run asked for and how many listings it returned, with the data licence and attribution.",
+            "template": "{{links.apiDefaultKeyValueStoreUrl}}/records/OUTPUT"
+        }
+    }
+}
