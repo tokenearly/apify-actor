@@ -1,14 +1,16 @@
 {
-  "actorSpecification": 1,
-  "name": "tokenearly-exchange-listings",
-  "title": "Tokenearly Exchange Listings",
-  "description": "New crypto token listings from 10+ exchanges (Binance, OKX, Bybit, Bitget, MEXC, Gate.io, HTX, KuCoin, Upbit, Bithumb) as a clean dataset. No API key needed.",
-  "version": "0.1",
-  "buildTag": "latest",
-  "input": "./INPUT_SCHEMA.json",
-  "dockerfile": "../Dockerfile",
-  "readme": "../README.md",
-  "storages": {
-    "dataset": "./dataset_schema.json"
-  }
+    "actorSpecification": 1,
+    "name": "tokenearly-exchange-listings",
+    "title": "Tokenearly Exchange Listings",
+    "description": "New crypto token listings from 10+ exchanges (Binance, OKX, Bybit, Bitget, MEXC, Gate.io, HTX, KuCoin, Upbit, Bithumb) as a clean dataset. No API key needed.",
+    "version": "0.1",
+    "buildTag": "latest",
+    "input": "./INPUT_SCHEMA.json",
+    "dockerfile": "../Dockerfile",
+    "readme": "../README.md",
+    "storages": {
+        "dataset": "./dataset_schema.json",
+        "keyValueStore": "./key_value_store_schema.json"
+    },
+    "output": "./output_schema.json"
 }
