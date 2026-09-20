@@ -1,0 +1,23 @@
+{
+    "actorKeyValueStoreSchemaVersion": 1,
+    "title": "Tokenearly run records",
+    "description": "Two records written by every run: the exchange coverage summary and the run summary.",
+    "collections": {
+        "exchanges": {
+            "title": "Exchange coverage",
+            "description": "Per-exchange summary: how announcements are collected (WebSocket stream or high-frequency polling) and how many listings each exchange published in the last 30 days.",
+            "key": "EXCHANGES",
+            "contentTypes": [
+                "application/json"
+            ]
+        },
+        "runSummary": {
+            "title": "Run summary",
+            "description": "What this run asked for and how many listings it returned, with the data licence and attribution.",
+            "key": "OUTPUT",
+            "contentTypes": [
+                "application/json"
+            ]
+        }
+    }
+}
