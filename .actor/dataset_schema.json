@@ -1,23 +1,130 @@
 {
-  "actorSpecification": 1,
-  "fields": {},
-  "views": {
-    "overview": {
-      "title": "Listings",
-      "transformation": {
-        "fields": ["published_at", "exchange_name", "type", "symbols", "title_en", "permalink"]
-      },
-      "display": {
-        "component": "table",
+    "actorSpecification": 1,
+    "fields": {
+        "title": "Listing",
+        "type": "object",
         "properties": {
-          "published_at": { "label": "Published (UTC)", "format": "date" },
-          "exchange_name": { "label": "Exchange", "format": "text" },
-          "type": { "label": "Type", "format": "text" },
-          "symbols": { "label": "Symbols", "format": "array" },
-          "title_en": { "label": "Title (EN)", "format": "text" },
-          "permalink": { "label": "Permalink", "format": "link" }
+            "exchange": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "title": "Exchange id",
+                "description": "Lowercase exchange id, for example binance or upbit."
+            },
+            "exchange_name": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "title": "Exchange",
+                "description": "Display name of the exchange."
+            },
+            "type": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "title": "Type",
+                "description": "spot or futures."
+            },
+            "symbols": {
+                "type": "array",
+                "title": "Symbols",
+                "description": "Token symbols mentioned in the announcement.",
+                "items": {
+                    "type": "string"
+                }
+            },
+            "published_at": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "title": "Published at",
+                "description": "Publication time of the announcement, ISO 8601 in UTC."
+            },
+            "title_en": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "title": "Title (EN)"
+            },
+            "title_zh": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "title": "Title (ZH)"
+            },
+            "title_ko": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "title": "Title (KO)"
+            },
+            "source_url": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "title": "Source URL",
+                "description": "The exchange's own announcement page."
+            },
+            "permalink": {
+                "type": [
+                    "string",
+                    "null"
+                ],
+                "title": "Permalink",
+                "description": "Stable Tokenearly URL for this announcement."
+            }
         }
-      }
+    },
+    "views": {
+        "overview": {
+            "title": "Listings",
+            "transformation": {
+                "fields": [
+                    "published_at",
+                    "exchange_name",
+                    "type",
+                    "symbols",
+                    "title_en",
+                    "permalink"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "published_at": {
+                        "label": "Published (UTC)",
+                        "format": "date"
+                    },
+                    "exchange_name": {
+                        "label": "Exchange",
+                        "format": "text"
+                    },
+                    "type": {
+                        "label": "Type",
+                        "format": "text"
+                    },
+                    "symbols": {
+                        "label": "Symbols",
+                        "format": "array"
+                    },
+                    "title_en": {
+                        "label": "Title (EN)",
+                        "format": "text"
+                    },
+                    "permalink": {
+                        "label": "Permalink",
+                        "format": "link"
+                    }
+                }
+            }
+        }
     }
-  }
 }
